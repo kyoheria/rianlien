@@ -1,0 +1,423 @@
+.header {
+  padding: 10px 16px;
+
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+.tab {
+  display: none;
+}
+a:link {
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited { 
+  background-color: transparent;
+  text-decoration: none;
+}
+
+body {
+  background-color: #D6D6FF;
+  color : #363640;
+  font-family: 'Gruppo';
+  font-size: 3vh;
+  line-height: 0px;
+  margin: 0;
+}
+h1{
+  font-size: 4vw;
+  line-height: 24px;
+}
+h2{
+  font-size: 3.5vw;
+  line-height: 24px;
+  color:#FFFFFF;
+  text-shadow: 2px 2px 2px #9AAEFC;
+}
+
+h4{
+  font-size: 2vw;
+  line-height: 24px;
+}
+
+h3{
+  font-size: 2.5vw;
+  color: #3C4463;
+  text-align: center;
+}
+p {
+  text-align: left;
+  line-height: 1.0;
+  font-size: 1.5vw;
+}
+
+fieldset{
+  width:50vw;
+  padding:40px;
+  padding-top: 0px;
+  border-width: 0px;
+}
+
+
+/* Style the navigation menu */
+.navbar {
+  position: static;
+  top: 10vh;
+  left: 0;
+  width: 100%;
+  overflow: auto;
+  background-color: #9191F2;
+  text-shadow: 2px 2px 2px #363640;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.navbar a:hover{
+  background-color: #363640;
+  color: #D6D6FF;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 2px #9191F2;
+}
+
+/* Navigation links */
+.navbar a {
+
+  float: left;
+  padding: 20px;
+  padding-left: 0;
+  padding-right: 0;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  width: 25%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
+  height: 0;
+  text-align: center; /* If you want the text to be centered */
+}
+
+/* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: left; /* If you want the text to be left-aligned on small screens */
+  }
+}
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+  padding-top: 10px;
+  vertical-align: top;
+  padding: 8vh;
+  font-size: 8vh;
+  height: 2vh;
+  text-align: center;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #9191F2; /* The typwriter cursor */
+  white-space: pre; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+.typewriter h2 {
+  padding: 3vh;
+  font-size: 3vh;
+  text-align: center;
+  height: 3vh;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #9191F2; /* The typwriter cursor */
+  white-space: pre; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 5s steps(50, end),
+    blink-caret .5s step-end infinite;
+}
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 10em }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #3C4463 }
+}
+
+.overlay {
+  height: 80vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0, 0.0);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 0%;
+  width: 100vw;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.overlay a {
+  float: left;
+  padding: 20px;
+  text-decoration: none;
+  color:white;
+  display: block;
+  transition: 0.3s;
+  width: 16.666%;
+  height: 100vh;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+  font-size: 17px;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color:#2D334A;
+  text-transform: uppercase;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  bottom: 20px;
+  right: 5px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  line-height: 15px;
+  color: #9AAEFC;
+}
+
+
+.left {
+  left: 0;
+}
+.right {
+  left: 50%;
+}
+
+
+.card {
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px 0 #9AAEFC;
+  transition: 0.3s;
+  width: 90%;
+  
+  font-size: 2vh;
+  color: #363640;
+  padding: 10px
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 #9AAEFC;
+}
+
+.Codecard {
+  margin: 0px;
+  box-shadow: 0 4px 8px 0 #9AAEFC;
+  transition: 0.3s;
+  width: 100%;
+  font-size: 2vh;
+  color: #363640;
+  padding: 10px;
+}
+
+.column {
+  float: left;
+  width: 33%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.container .card:first-child {
+  margin-left: 0;
+  margin-right:0 ;
+}
+.container .card:nth-child(5n) {
+  margin-right: 0;
+}
+
+.Codecard:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
+.text {
+  padding: 20px 16px;
+}
+
+.flip-card {
+  float: left;
+  background-color: #2D334A;
+  width: 100%;
+  height: 30vh;
+  border: 1px solid #f1f1f1;
+  /*perspective: 1000px;  Remove this if you don't want the 3D effect */
+  color: #E6C09E;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  color: #E6C09E;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+  color: #E6C09E;
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  color: #E6C09E;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #2D334A;
+  color: black;
+  color: #E6C09E;
+}
+
+/* Style the back side */
+.flip-card-back {
+  position: absolute;
+  background-color:  #E6C09E;
+  transform: rotateY(180deg);
+  color: #2D334A;
+  line-height: 0.8;
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+  
+}
+
+
+div.sticky {
+  position: sticky;
+  position: sticky;
+  top: 0;
+}
+
+
+
+.box {
+  padding: 10px 40px;
+  font-size: 2.5vh;
+  background-color: inherit;
+  width: 90%;
+  line-height: 15px;
+  color: #9AAEFC;
+  margin: auto;
+}
+
+
+.lefty {
+  left: 0;
+}
+.righty {
+  left: 50%;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #9191F2;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #9191F2;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
